@@ -28,6 +28,8 @@ After self-supervised training $g(.)$ should be removed and only $f(.)$ should b
 $$
 l_{i,j} = − \text{log}\frac{\text{exp}(\text{sim}(z_i, z_j)/\tau )}{\sum_{k=1}^N \mathbb{1}_{k \neq 1} \text{sim}(z_i, z_k)/\tau}
 $$
+
+**The loss is just a cross-entropy loss on similarity across different pairs in a batch.**
 Intution behind the loss, given a positive pair $x_i$, $x_j$ in $\{x_k\}$, contrastive loss aims to identify $x_j$ given $x_i$ in $\{x_k\}_{k\neq i}$.
 
 The contrstive loss includes both the orders of each $\mathcal{L} = l(i,j) + l(j,i)$, the loss is calculated for both directions of the positive pair, ensuring symmetry in the optimization process.
