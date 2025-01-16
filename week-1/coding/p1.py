@@ -1,5 +1,5 @@
 # problem: 2429. Minimize XOR
-# ref: https://leetcode.com/problems/minimize-xor/description/
+# ref: https://leetcode.com/problems/minimize-xor
 
 class Solution:
     def toBinary(self, num: int):
